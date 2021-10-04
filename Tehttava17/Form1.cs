@@ -49,7 +49,7 @@ namespace Tehttava17
                 if (!string.IsNullOrEmpty(kirjoit_richTextBox.Text))
                 {
                     saveFileDialog = new SaveFileDialog();
-                    saveFileDialog.Filter = "Teksti tiedosto (*.txt) | *.txt";
+                    saveFileDialog.Filter = "Teksti tiedosto (*.txt) | *.txt|Rikas tekstiformaatti (*.rtf) | *.rtf";
                     if (saveFileDialog.ShowDialog() == DialogResult.OK)
                     {
                         File.WriteAllText(saveFileDialog.FileName, kirjoit_richTextBox.Text);
@@ -128,7 +128,7 @@ namespace Tehttava17
                 }
             }
             catch (Exception ex)
-            {
+            { 
                 MessageBox.Show("Virhe " + ex);
             }
         }
